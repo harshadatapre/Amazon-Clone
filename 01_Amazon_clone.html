@@ -17,20 +17,29 @@
 
           <!--box 1-->
 
-          <div class="nav-logo">
-            <div class="logo border"></div>
-          </div>
+          <a href="01_Amazon_clone.html">
+            <div class="nav-logo">
+              <div class="logo border"></div>
+            </div>
+          </a>
           
-
           <!--box 2-->
           
-          <div class="nav-address border">
+          <button class="nav-address border" popovertarget="address-menu">
               <p class="add-first">Deliver to</p>
 
               <div class="add-icon">
                 <i class="fa-solid fa-location-dot"></i>
                 <p class="add-second">India</p>
               </div>
+          </button>
+
+          <div id="address-menu" popover>
+            <div class="popover-content">
+              <h3>Choose your location</h3>
+              <p>Select a delivery location to see product availability and delivery options</p>
+              <button class="popover-btn">Sign in to see your addresses</button>
+            </div>
           </div>
 
           <!--box 3-->
