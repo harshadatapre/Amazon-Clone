@@ -61,15 +61,6 @@
     align-items: center;
 }
 
-[popover] {
-    width: 300px;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px ;
-}
-
-
 /** box 3 **/
 
 .nav-search {
