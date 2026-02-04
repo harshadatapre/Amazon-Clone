@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal trying</title>
+    <!-- css link -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+  <!-- button -->
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+     Deliver to India
+  </button>
+
+  <!-- Modal -->
+  <div class="modal" id="myModal"  tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #d2d7d74d">
+          <h5 class="modal-title"><b>Choose your location</b></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Statement -->
+          <p>Select a delivery location to see product availability and delivery options</p>
+          <!-- button -->
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-warning rounded-pill flex-grow-1">Sign in to see your addresses</button>
+          </div>
+          <!-- line with text -->
+        <div class="d-flex align-items-center my3 mt-2">
+          <div class="flex-grow-1 border-top"></div>
+          <span class="mx-2">or enter an Indian pincode</span>
+          <div class="flex-grow-1 border-top"></div>
+        </div>
+        <!-- input pin -->
+        <!-- <div>
+          
+          <input type="text" class="form-control" id="inputZip">
+        </div> -->
+      </div>
+    </div>
+    <!-- modal footer -->
+    <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div> -->
+   </div>
+
+  </div>
+  </div>
+
+<!-- js link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+   
+        
+</body>
+</html>
