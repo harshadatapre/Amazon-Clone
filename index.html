@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches...</title> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <!-- fevicon -->
     <link rel="icon" href="Images/s_logo.jpeg">
@@ -26,13 +27,52 @@
 
           <!--box 2-->
           
-          <div class="nav-address border">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
               <p class="add-first">Deliver to</p>
 
               <div class="add-icon">
                 <i class="fa-solid fa-location-dot"></i>
                 <p class="add-second">India</p>
               </div>
+          </button>
+
+          <!-- Modal -->
+          <div class="modal" id="myModal"  tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: #d2d7d74d">
+                  <h5 class="modal-title"><b>Choose your location</b></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Statement -->
+                  <p>Select a delivery location to see product availability and delivery options</p>
+                  <!-- button -->
+                  <div class="d-flex justify-content-center">
+                  <button type="button" class="btn btn-warning rounded-pill flex-grow-1">Sign in to see your addresses</button>
+                </div>
+                <!-- line with text -->
+                <div class="d-flex align-items-center my3 mt-2">
+                  <div class="flex-grow-1 border-top"></div>
+                  <span class="mx-2">or enter an Indian pincode</span>
+                    <div class="flex-grow-1 border-top"></div>
+                    </div>
+                    <!-- pin & apply section -->
+                    <section class="mt-2">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <!-- input pin -->
+                            <input type="text" class="form-control" id="inputZip">
+                          </div>
+                          <div class="col-md-4">
+                            <button class="rounded-pill apply_btn">Apply</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                </div>
+            </div>
           </div>
 
           <!--box 3-->
@@ -246,5 +286,8 @@
       </div>
         
     </footer>
+
+    <!-- js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>

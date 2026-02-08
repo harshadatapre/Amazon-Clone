@@ -61,6 +61,21 @@
     align-items: center;
 }
 
+/* modal */
+.apply_btn {
+    border: 1px solid black; 
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+    outline: none;
+}
+
+.apply_btn:focus {
+    background-color: rgb(163, 215, 236);
+    border: 0.5px solid rgb(55, 55, 255);
+}
+
 /** box 3 **/
 
 .nav-search {
