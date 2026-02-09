@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.navbar {
+.amazon-navbar {
     height: 60px;
     background-color: #0f1111;
     color: white;
@@ -75,6 +75,7 @@
     background-color: rgb(163, 215, 236);
     border: 0.5px solid rgb(55, 55, 255);
 }
+
 
 /** box 3 **/
 
@@ -150,7 +151,7 @@
 
 }
 
-span {
+.nav-signin span {
     font-size: 0.7rem;
 }
 
