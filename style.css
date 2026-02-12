@@ -22,7 +22,7 @@
 }
 
 .logo {
-    background-image: url("amazon_logo_2.jpg");
+    background-image: url("Images/amazon_logo_2.jpg");
     background-size: cover;
     height: 50px;
     width: 100%;
@@ -117,7 +117,7 @@
 }
 
 .flag {
-    background-image: url(flag.jpg);
+    background-image: url(Images/flag.jpg);
     background-size: cover;
     height: 15px;
     width: 23px;
@@ -199,7 +199,7 @@ span {
 /** hero-section **/
 
 .hero-section {
-    background-image: url(hero_image.jpg);
+    background-image: url(Images/hero_image.jpg);
     background-size: cover;
     height: 350px;
     display: flex;
@@ -239,11 +239,13 @@ span {
 
 .box {
     /**border: 2px solid black;**/
-    height: 400px;
+    height: 450px;
     width: 23%;
     background-color: white;
     padding: 20px 0px 15px;
     margin: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .box-img {
@@ -257,10 +259,21 @@ span {
 .box-content {
     margin-left: 1rem;
     margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .box-content p {
-    color: #222f3d;
+    color: #007185;
+    font-size: 0.85rem;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.box-content p:hover {
+    text-decoration: underline;
+    color: #c45500;
 }
 
 /** footer **/
@@ -309,7 +322,7 @@ ul a {
 }
 
 .logo {
-    background-image: url(amazon_logo_2.jpg);
+    background-image: url(Images/amazon_logo_2.jpg);
     background-size: cover;
     height: 50px;
     width: 100px;
