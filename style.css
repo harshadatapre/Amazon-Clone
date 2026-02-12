@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.amazon-navbar {
+.navbar {
     height: 60px;
     background-color: #0f1111;
     color: white;
@@ -22,7 +22,7 @@
 }
 
 .logo {
-    background-image: url("Images/amazon_logo_2.jpg");
+    background-image: url("amazon_logo_2.jpg");
     background-size: cover;
     height: 50px;
     width: 100%;
@@ -60,22 +60,6 @@
     display: flex;
     align-items: center;
 }
-
-/* modal */
-.apply_btn {
-    border: 1px solid black; 
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 6.5px;
-    padding-bottom: 6.5px;
-    outline: none;
-}
-
-.apply_btn:focus {
-    background-color: rgb(163, 215, 236);
-    border: 0.5px solid rgb(55, 55, 255);
-}
-
 
 /** box 3 **/
 
@@ -133,7 +117,7 @@
 }
 
 .flag {
-    background-image: url(Images/flag.jpg);
+    background-image: url(flag.jpg);
     background-size: cover;
     height: 15px;
     width: 23px;
@@ -151,7 +135,7 @@
 
 }
 
-.nav-signin span {
+span {
     font-size: 0.7rem;
 }
 
@@ -215,7 +199,7 @@
 /** hero-section **/
 
 .hero-section {
-    background-image: url(Images/hero_image.jpg);
+    background-image: url(hero_image.jpg);
     background-size: cover;
     height: 350px;
     display: flex;
@@ -325,7 +309,7 @@ ul a {
 }
 
 .logo {
-    background-image: url(Images/amazon_logo_2.jpg);
+    background-image: url(amazon_logo_2.jpg);
     background-size: cover;
     height: 50px;
     width: 100px;

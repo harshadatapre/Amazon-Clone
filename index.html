@@ -4,20 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches...</title> 
-    <!-- css link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="style.css">
-    <!-- fevicon -->
-    <link rel="icon" href="Images/s_logo.jpeg">
+    <title>Amazon</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="01_Amazon_clone.css">
 </head>
 <body>
    <header>
 
         <!-- Navbar -->
 
-        <div class="amazon-navbar">
+        <div class="navbar">
 
           <!--box 1-->
 
@@ -28,16 +24,14 @@
 
           <!--box 2-->
           
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+          <div class="nav-address border">
               <p class="add-first">Deliver to</p>
 
               <div class="add-icon">
                 <i class="fa-solid fa-location-dot"></i>
                 <p class="add-second">India</p>
               </div>
-          </button>
-
-          
+          </div>
 
           <!--box 3-->
 
@@ -77,6 +71,7 @@
           <div class="nav-cart border">
             <i class="fa-solid fa-cart-shopping"></i>
             Cart
+            <span id="cart-count">0</span>
           </div>
 
         </div>
@@ -103,7 +98,8 @@
         </div>
 
    </header>
-    <!--hero-section -->
+
+   <!--hero-section -->
 
    <!--hero section message-->
 
@@ -120,28 +116,29 @@
      <div class="box1 box">
        <div class="box-content">
         <h2>Clothes</h2>
-        <div class="box-img" style="background-image: url('Images/box1_image.jpg');"></div>
+        <div class="box-img" style="background-image: url('box1_image.jpg');"></div>
         <p>See more</p>
        </div>
      </div>
      <div class="box2 box">
        <div class="box-content">
          <h2>Health & Personal Care</h2>
-         <div class="box-img" style="background-image: url('Images/box2_image.jpg');"></div>
+         <div class="box-img" style="background-image: url('box2_image.jpg');"></div>
          <p>See more</p>
+         <button class="add-to-cart-btn">Add to Cart</button>
        </div>
      </div>
      <div class="box3 box">
        <div class="box-content">
          <h2>Furniture</h2>
-         <div class="box-img" style="background-image: url('Images/box3_image.jpg');"></div>
+         <div class="box-img" style="background-image: url('box3_image.jpg');"></div>
          <p>See more</p>
        </div>
      </div>
      <div class="box4 box">
        <div class="box-content">
          <h2>Electronics</h2>
-         <div class="box-img" style="background-image: url('Images/box4_image.jpg');"></div>
+         <div class="box-img" style="background-image: url('box4_image.jpg');"></div>
          <p>See more</p>
        </div>
      </div>
@@ -153,28 +150,28 @@
       <div class="box5 box">
         <div class="box-content">
          <h2>Beauty picks</h2>
-         <div class="box-img" style="background-image: url('Images/box5_image.jpg');"></div>
+         <div class="box-img" style="background-image: url('box5_image.jpg');"></div>
          <p>See more</p>
         </div>
       </div>
       <div class="box6 box">
         <div class="box-content">
           <h2>Pet Care</h2>
-          <div class="box-img" style="background-image: url('Images/box6_image.jpg');"></div>
+          <div class="box-img" style="background-image: url('box6_image.jpg');"></div>
           <p>See more</p>
         </div>
       </div>
       <div class="box7 box">
         <div class="box-content">
           <h2>New Arrival in Toys</h2>
-          <div class="box-img" style="background-image: url('Images/box7_image.jpg');"></div>
+          <div class="box-img" style="background-image: url('box7_image.jpg');"></div>
           <p>See more</p>
         </div>
       </div>
       <div class="box8 box">
         <div class="box-content">
           <h2>Smartwatches</h2>
-          <div class="box-img" style="background-image: url('Images/box8_image.jpg');"></div>
+          <div class="box-img" style="background-image: url('box8_image.jpg');"></div>
           <p>See more</p>
         </div>
       </div>
@@ -249,50 +246,5 @@
       </div>
         
     </footer>
-
-   <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-
-      <div class="modal-header" style="background-color: #d2d7d74d">
-        <h5 class="modal-title"><b>Choose your location</b></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-        <p>Select a delivery location to see product availability and delivery options</p>
-
-        <div class="d-flex justify-content-center">
-          <button class="btn btn-warning rounded-pill w-100">
-            Sign in to see your addresses
-          </button>
-        </div>
-
-        <div class="d-flex align-items-center mt-3">
-          <div class="flex-grow-1 border-top"></div>
-          <span class="mx-2">or enter an Indian pincode</span>
-          <div class="flex-grow-1 border-top"></div>
-        </div>
-
-        <div class="row mt-3">
-          <div class="col-md-8">
-            <input type="text" class="form-control" id="inputZip">
-          </div>
-          <div class="col-md-4">
-            <button class="rounded-pill apply_btn w-100">
-              Apply
-            </button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-    <!-- js link -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
