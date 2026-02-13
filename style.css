@@ -162,6 +162,13 @@ span {
     padding: 10px;
 }
 
+/* This class will be added by JavaScript momentarily */
+.bump {
+    transform: scale(1.2);
+    transition: transform 0.1s ease-out;
+    color: #febd68; /* Amazon Orange */
+}
+
 /** panel **/
 
 .panel {
@@ -274,6 +281,24 @@ span {
 .box-content p:hover {
     text-decoration: underline;
     color: #c45500;
+}
+
+/* Modern Amazon Button styling */
+.add-to-cart-btn {
+    background-color: #ffd814;
+    border: 1px solid #fcd200;
+    border-radius: 20px;
+    padding: 7px 0;   /*Vertical padding*/
+    width: 100%; /* Makes button full width of the box padding*/
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    transition: background 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #f7ca00;
+    border-color: #f2c200;
 }
 
 /** footer **/
