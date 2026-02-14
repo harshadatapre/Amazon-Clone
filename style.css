@@ -162,13 +162,6 @@ span {
     padding: 10px;
 }
 
-/* This class will be added by JavaScript momentarily */
-.bump {
-    transform: scale(1.2);
-    transition: transform 0.1s ease-out;
-    color: #febd68; /* Amazon Orange */
-}
-
 /** panel **/
 
 .panel {
@@ -299,6 +292,36 @@ span {
 .add-to-cart-btn:hover {
     background-color: #f7ca00;
     border-color: #f2c200;
+}
+
+/* Container for the notification */
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #232f3e; /*Amazon dark blue*/
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border-left: 5px solid #ffa41c; /*Amazon orange*/
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-size:0.9rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideIn 0.4s ease-out, fadeOut 0.4s ease-in 2.6s forwards;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0;}
+    to { transform: translateX(0); opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from { opacity: 1;}
+    to { opacity: 0;}
 }
 
 /** footer **/
