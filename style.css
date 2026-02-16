@@ -359,6 +359,29 @@ ul a {
     color: #dddddd;
 }
 
+/* btn clear all items */
+
+.footer-reset-section {
+    padding: 20px 0;
+    text-align: center; /* Centers the button */
+    border-top: 1px solid #3a4553; /* Subtle line to separate it */
+    background-color: #232f3e; /* Matches the dark footer color */
+}
+
+.clear-btn {
+    background-color: #f0c14b; /* Amazon button yellow */
+    border: 1px solid #a88734;
+    color: #111;
+    padding: 7px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.clear-btn:hover {
+    background-color: #ddb347;
+}
+
 .foot-panel3 {
     background-color: #222f3d;
     color: white;
