@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "title": "Clothes",
+        "image": "Images/box1_image.jpg",
+        "category": "style",
+        "price": 25.50
+    },
+    {
+        "id": 2,
+        "title": "Health & Personal Care",
+        "image": "Images/box2_image.jpg",
+        "category": "health",
+        "price": 20.00
+    },
+    {
+        "id": 3,
+        "title": "Furniture",
+        "image": "Images/box3_image.jpg",
+        "category": "home",
+        "price": 70.50
+    },
+    {
+        "id": 4,
+        "title": "Electronics",
+        "image": "Images/box4_image.jpg",
+        "category": "electronics",
+        "price": 12.00
+    },
+    {
+        "id": 5,
+        "title": "Beauty picks",
+        "image": "Images/box5_image.jpg",
+        "category": "style",
+        "price": 30.00
+    },
+    {
+        "id": 6,
+        "title": "Pet Care",
+        "image": "Images/box6_image.jpg",
+        "category": "pet_care",
+        "price": 80.99
+    },
+    {
+        "id": 7,
+        "title": "New Arrival in Toys",
+        "image": "Images/box7_image.jpg",
+        "category": "kids",
+        "price": 30.00
+    },
+    {
+        "id": 8,
+        "title": "Smartwatches",
+        "image": "Images/box8_image.jpg",
+        "category": "electronics",
+        "price": 99.99
+    }
+]

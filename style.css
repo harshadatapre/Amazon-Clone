@@ -324,6 +324,21 @@ span {
     to { opacity: 0;}
 }
 
+.product-container {
+    display: flex;
+    flex-wrap: wrap;       /* This allows items to move to the next row */
+    justify-content: space-evenly; /* Even spacing between boxes */
+    padding: 5px;
+    background-color: #e3e6e6; /* Amazon's light grey background */
+}
+
+.product-card {
+    flex: 0 0 22%;         /* Each card takes up roughly 23% (approx 4 per row) */
+    margin-bottom: 5px;   /* Adds space between the rows */
+    background-color: white;
+    padding: 15px;
+}
+
 /** footer **/
 
 footer {

@@ -82,18 +82,19 @@
 
         <div class="panel">
 
-          <div class="panel-all border">
+          <div class="panel-all filter-link" data-category>
             <i class="fa-solid fa-bars"></i>
             All
           </div>
           <div class="panel-ops">
-            <p class="border">Today's Deals</p>
-            <p class="border">Customer Service</p>
-            <p class="border">Registry</p>
-            <p class="border">Gift Cards</p>
-            <p class="border">Sell</p>
+            <p class="border filter-link" data-category>Style</p>
+            <p class="border filter-link" data-category>Health</p>
+            <p class="border filter-link" data-category>Home</p>
+            <p class="border filter-link" data-category>Electronics</p>
+            <p class="border filter-link" data-category>Pet Care</p>
+            <p class="border filter-link" data-category>Kids</p>
           </div>
-          <div class="panel-deals border">
+          <div class="panel-deals border filter-link">
             Shop deals in Electronics
           </div>
 
@@ -114,78 +115,11 @@
 
     <!--shop-section1-->
 
-   <div class="shop-section1">
-     <div class="box1 box product-card clothes">
-       <div class="box-content">
-        <h2>Clothes</h2>
-        <div class="box-img" style="background-image: url('Images/box1_image.jpg');"></div>
-        <p>See more</p>
-        <button class="add-to-cart-btn">Add to Cart</button>
-       </div>
-     </div>
-     <div class="box2 box product-card personal_care">
-       <div class="box-content">
-         <h2>Health & Personal Care</h2>
-         <div class="box-img" style="background-image: url('Images/box2_image.jpg');"></div>
-         <p>See more</p>
-         <button class="add-to-cart-btn">Add to Cart</button>
-       </div>
-     </div>
-     <div class="box3 box product-card furniture">
-       <div class="box-content">
-         <h2>Furniture</h2>
-         <div class="box-img" style="background-image: url('Images/box3_image.jpg');"></div>
-         <p>See more</p>
-         <button class="add-to-cart-btn">Add to Cart</button>
-       </div>
-     </div>
-     <div class="box4 box product-card electronics">
-       <div class="box-content">
-         <h2>Electronics</h2>
-         <div class="box-img" style="background-image: url('Images/box4_image.jpg');"></div>
-         <p>See more</p>
-         <button class="add-to-cart-btn">Add to Cart</button>
-       </div>
-     </div>
+    <div class="shop-section1 product-container">
+      <div id="loading-spinner">Loading products for you...</div>
     </div>
 
-    <!--shop-section2-->
-
-    <div class="shop-section2">
-      <div class="box5 box product-card beauty">
-        <div class="box-content">
-         <h2>Beauty picks</h2>
-         <div class="box-img" style="background-image: url('Images/box5_image.jpg');"></div>
-         <p>See more</p>
-         <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-      </div>
-      <div class="box6 box product-card pet_care">
-        <div class="box-content">
-          <h2>Pet Care</h2>
-          <div class="box-img" style="background-image: url('Images/box6_image.jpg');"></div>
-          <p>See more</p>
-          <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-      </div>
-      <div class="box7 box product-card toys">
-        <div class="box-content">
-          <h2>New Arrival in Toys</h2>
-          <div class="box-img" style="background-image: url('Images/box7_image.jpg');"></div>
-          <p>See more</p>
-          <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-      </div>
-      <div class="box8 box product-card electronics">
-        <div class="box-content">
-          <h2>Smartwatches</h2>
-          <div class="box-img" style="background-image: url('Images/box8_image.jpg');"></div>
-          <p>See more</p>
-          <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
+    
     <!-- msg no results fonund -->
     <div id="no-results" style="display: none; text-align: center; padding: 50px; width: 100%;">
       <h2 style="color: #c45500;">No results found.</h2>
