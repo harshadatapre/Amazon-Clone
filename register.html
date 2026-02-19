@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login-style.css"> </head>
+<body>
+    <div class="login-wrapper">
+        <a href="index.html">
+            <img class="login-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+        </a>
+
+        <div class="login-container">
+            <h1>Create account</h1>
+            <form id="register-form">
+                <h5>Your name</h5>
+                <input type="text" id="reg-name" placeholder="First and last name" required>
+
+                <h5>Mobile number or email</h5>
+                <input type="email" id="reg-email" required>
+
+                <h5>Password</h5>
+                <input type="password" id="reg-password" placeholder="At least 6 characters" required>
+
+                <button type="submit" class="login-signInButton">Create your Amazon account</button>
+            </form>
+
+            <p style="font-size: 11px; margin-top: 20px;">
+                Already have an account? <a href="login.html" style="color: #0066c0;">Sign-In</a>
+            </p>
+        </div>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>

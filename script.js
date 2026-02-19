@@ -44,6 +44,7 @@ async function loadProducts() {
         // Initialize features
         initializeCartLogic();
         initializeSearchLogic();
+        initializeCategoryFilters();
 
     } catch (error) {
         // 5. If something goes wrong, tell the user!
@@ -55,15 +56,36 @@ async function loadProducts() {
     }
 }
 
-// 3. CART LOGIC (Wrapped in a function)
+// 3. CART LOGIC
 function initializeCartLogic() {
     const buttons = document.querySelectorAll('.add-to-cart-btn');
     
     buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            count++;
+        button.addEventListener('click', (e) => {
+            // Find the parent card of the button clicked
+            const card = e.target.closest('.product-card');
+            
+            // Capture product details
+            const product = {
+                title: card.querySelector('h2').innerText,
+                price: parseFloat(card.querySelector('.price').innerText.replace('$', '')),
+                image: card.querySelector('.box-img').style.backgroundImage.slice(5, -2) // Extracts the URL
+            };
+
+            // 1. Get current cart from LocalStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // 2. Add the new product object to the array
+            cart.push(product);
+            
+            // 3. Save back to LocalStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // 4. Update the visual count
+            count = cart.length;
             cartBadge.innerText = count;
-            localStorage.setItem('amazonCartCount', count);
+            localStorage.setItem('amazonCartCount', count); // Keep your existing counter synced
+            
             showSuccessMessage();
         });
     });
@@ -105,14 +127,16 @@ function showSuccessMessage() {
     setTimeout(() => toast.remove(), 3000);
 }
 
-// 6. CLEAR CART (Can stay outside because the button is always in HTML)
+// 6. CLEAR CART 
 const clearBtn = document.getElementById('clear-cart-btn');
 if (clearBtn) {
     clearBtn.addEventListener('click', () => {
         if (confirm("Are you sure you want to empty your cart?")) {
             count = 0;
             cartBadge.innerText = count;
+            // Clear BOTH keys
             localStorage.removeItem('amazonCartCount');
+            localStorage.removeItem('cart'); 
             alert("Cart cleared!");
         }
     });
@@ -150,4 +174,23 @@ function initializeCategoryFilters() {
             }
         });
     });
+}
+
+//update cart
+function updateNavbar() {
+    const userDisplay = document.getElementById('nav-user-info');
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const userName = localStorage.getItem('userName'); // Now getting the actual name
+
+    if (isLoggedIn === 'true' && userName) {
+        userDisplay.innerHTML = `
+            <p>Hello, ${userName}</p>
+            <p class="nav-second" id="logout-link" style="color: #f08804; cursor: pointer;">Sign Out</p>
+        `;
+        
+        document.getElementById('logout-link').addEventListener('click', () => {
+            localStorage.clear(); // Clears everything including cart, or use removeItem for specific keys
+            window.location.reload();
+        });
+    }
 }

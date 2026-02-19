@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone - Checkout</title>
+    <link rel="stylesheet" href="style.css"> <style>
+        /* Specific checkout layout */
+        .checkout-main { display: flex; padding: 20px; gap: 20px; background: #eaeded; min-height: 100vh; }
+        .cart-list { flex: 3; background: white; padding: 20px; }
+        .order-summary { flex: 1; background: white; padding: 20px; height: fit-content; position: sticky; top: 20px; }
+        .checkout-item { display: flex; border-bottom: 1px solid #DDD; padding: 10px 0; align-items: center; }
+        .checkout-item img { width: 100px; height: 100px; object-fit: contain; }
+        .item-details { margin-left: 20px; flex-grow: 1; }
+        .remove-btn { color: #007185; cursor: pointer; background: none; border: none; font-size: 12px; }
+        .remove-btn:hover { text-decoration: underline; color: #C45500; }
+    </style>
+</head>
+<body>
+    <div class="checkout-main">
+        <div class="cart-list">
+            <h1>Shopping Cart</h1>
+            <div id="cart-items-container">
+                </div>
+        </div>
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div id="summary-details">
+                <p>Items: <span id="total-items">0</span></p>
+                <p>Shipping: <span style="color: green;">FREE</span></p>
+                <hr>
+                <h2 style="color: #B12704;">Order Total: $<span id="grand-total">0.00</span></h2>
+            </div>
+            <button class="amazon-btn" style="width: 100%; padding: 10px; background: #FFD814; border: 1px solid #FCD200; border-radius: 8px; cursor: pointer;">Proceed to Buy</button>
+        </div>
+    </div>
+    <script src="checkout.js"></script>
+</body>
+</html>
