@@ -177,20 +177,32 @@ function initializeCategoryFilters() {
 }
 
 //update cart
-function updateNavbar() {
+function updateHomeNavbar() {
     const userDisplay = document.getElementById('nav-user-info');
     const isLoggedIn = localStorage.getItem('isLoggedIn');
-    const userName = localStorage.getItem('userName'); // Now getting the actual name
+    const userName = localStorage.getItem('userName');
 
-    if (isLoggedIn === 'true' && userName) {
+    // 1. Update the User Name (if logged in)
+    if (userDisplay && isLoggedIn === 'true' && userName) {
         userDisplay.innerHTML = `
             <p>Hello, ${userName}</p>
-            <p class="nav-second" id="logout-link" style="color: #f08804; cursor: pointer;">Sign Out</p>
+            <p class="nav-second" id="logout-btn" style="color: #f08804; cursor: pointer;">Sign Out</p>
         `;
         
-        document.getElementById('logout-link').addEventListener('click', () => {
-            localStorage.clear(); // Clears everything including cart, or use removeItem for specific keys
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userName');
             window.location.reload();
         });
     }
+
+    // 2. ALWAYS update the Cart Badge (from LocalStorage)
+    const cartBadge = document.getElementById('cart-count');
+    const savedCount = localStorage.getItem('amazonCartCount') || 0;
+    
+    if (cartBadge) {
+        cartBadge.innerText = savedCount;
+    }
 }
+
+updateHomeNavbar();
