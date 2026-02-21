@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="background: #eaeded;">
+    <div class="login-wrapper">
+        <img class="login-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+        
+        <div class="login-container" id="payment-box">
+            <h1>Payment Method</h1>
+            <form id="payment-form">
+                <h5>Card Number</h5>
+                <input type="text" id="card-num" placeholder="1111 2222 3333 4444" maxlength="16" required>
+                
+                <div style="display: flex; gap: 10px;">
+                    <div style="flex: 2;">
+                        <h5>Expiration</h5>
+                        <input type="text" placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div style="flex: 1;">
+                        <h5>CVV</h5>
+                        <input type="password" placeholder="123" maxlength="3" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="pay-btn" class="login-signInButton">
+                    <span id="btn-text">Pay Now</span>
+                    <div id="spinner" class="hidden-spinner"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="payment.js"></script>
+</body>
+</html>
