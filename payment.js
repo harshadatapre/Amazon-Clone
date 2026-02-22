@@ -1,3 +1,16 @@
+// --- THE GUARD RAIL ---
+// This runs the millisecond payment.html opens
+const checkLogin = localStorage.getItem('isLoggedIn');
+
+if (checkLogin !== 'true') {
+    // If they aren't logged in, don't even let them see the page
+    alert("You must be signed in to access the payment page.");
+    window.location.href = 'login.html'; 
+}
+// -----------------------
+
+// Rest of your payment logic (the spinner, the confirm button, etc.) starts here...
+
 document.getElementById('payment-form').addEventListener('submit', function(e) {
     e.preventDefault();
 

@@ -44,12 +44,25 @@
     <div class="success-card">
         <div class="success-icon">✔</div>
         <h1>Order placed, thank you!</h1>
-        <p>Confirmation will be sent to your email. Your items are now being prepared for shipping.</p>
+        <p id="conf-msg">Processing your confirmation...</p>
         
         <button class="amazon-btn" onclick="window.location.href='index.html'">
             Continue Shopping
         </button>
     </div>
+
+    <script>
+        // Get the email from LocalStorage (saved during login/register)
+        const userEmail = localStorage.getItem('currentUser');
+
+        if (userEmail) {
+            document.getElementById('conf-msg').innerText = 
+                `A confirmation receipt has been sent to ${userEmail}. Your items are now being prepared for shipping.`;
+        } else {
+            document.getElementById('conf-msg').innerText = 
+                "A confirmation receipt has been sent to your inbox.";
+        }
+</script>
 
 </body>
 </html>

@@ -2,6 +2,22 @@
 let count = parseInt(localStorage.getItem('amazonCartCount')) || 0;
 const cartBadge = document.getElementById('cart-count');
 
+// --- Put this at the very top under your cart count variable ---
+function logout() {
+    // Clear ALL user-related data
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('currentUser');
+    localStorage.removeItem('userName');
+    
+    // Optional: Do you want to clear the cart on logout? 
+    // Usually, Amazon keeps the cart, but if you want it empty:
+    // localStorage.removeItem('cart');
+    // localStorage.removeItem('amazonCartCount');
+
+    alert("You have been logged out.");
+    window.location.reload(); 
+}
+
 // Initialize the badge on page load
 if (cartBadge) cartBadge.innerText = count;
 
@@ -186,14 +202,8 @@ function updateHomeNavbar() {
     if (userDisplay && isLoggedIn === 'true' && userName) {
         userDisplay.innerHTML = `
             <p>Hello, ${userName}</p>
-            <p class="nav-second" id="logout-btn" style="color: #f08804; cursor: pointer;">Sign Out</p>
+            <p class="nav-second" onclick="logout()" style="color: #f08804; cursor: pointer;">Sign Out</p>
         `;
-        
-        document.getElementById('logout-btn').addEventListener('click', () => {
-            localStorage.removeItem('isLoggedIn');
-            localStorage.removeItem('userName');
-            window.location.reload();
-        });
     }
 
     // 2. ALWAYS update the Cart Badge (from LocalStorage)
@@ -206,3 +216,12 @@ function updateHomeNavbar() {
 }
 
 updateHomeNavbar();
+
+// Add this to your main script or header logic
+function logout() {
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('currentUser');
+    localStorage.removeItem('userName');
+    alert("You have been logged out.");
+    window.location.reload(); // Refresh the page to update the UI
+}
