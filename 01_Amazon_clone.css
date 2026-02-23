@@ -1,12 +1,7 @@
 *{
     margin: 0;
-    padding: 0;
     font-family: Arial;
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -27,7 +22,7 @@ html {
 }
 
 .logo {
-    background-image: url("Images/amazon_logo_2.jpg");
+    background-image: url("amazon_logo_2.jpg");
     background-size: cover;
     height: 50px;
     width: 100%;
@@ -122,7 +117,7 @@ html {
 }
 
 .flag {
-    background-image: url(Images/flag.jpg);
+    background-image: url(flag.jpg);
     background-size: cover;
     height: 15px;
     width: 23px;
@@ -204,7 +199,7 @@ span {
 /** hero-section **/
 
 .hero-section {
-    background-image: url(Images/hero_image.jpg);
+    background-image: url(hero_image.jpg);
     background-size: cover;
     height: 350px;
     display: flex;
@@ -244,13 +239,11 @@ span {
 
 .box {
     /**border: 2px solid black;**/
-    height: 450px;
+    height: 400px;
     width: 23%;
     background-color: white;
     padding: 20px 0px 15px;
     margin: 15px;
-    display: flex;
-    flex-direction: column;
 }
 
 .box-img {
@@ -264,95 +257,16 @@ span {
 .box-content {
     margin-left: 1rem;
     margin-right: 1rem;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
 }
 
 .box-content p {
-    color: #007185;
-    font-size: 0.85rem;
-    margin-top: auto;
-    cursor: pointer;
-}
-
-.box-content p:hover {
-    text-decoration: underline;
-    color: #c45500;
-}
-
-/* Modern Amazon Button styling */
-.add-to-cart-btn {
-    background-color: #ffd814;
-    border: 1px solid #fcd200;
-    border-radius: 20px;
-    padding: 7px 0;   /*Vertical padding*/
-    width: 100%; /* Makes button full width of the box padding*/
-    cursor: pointer;
-    margin-top: 10px;
-    font-size: 0.8rem;
-    transition: background 0.2s;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #f7ca00;
-    border-color: #f2c200;
-}
-
-/* Container for the notification */
-.toast-notification {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #232f3e; /*Amazon dark blue*/
-    color: white;
-    padding: 12px 25px;
-    border-radius: 4px;
-    border-left: 5px solid #ffa41c; /*Amazon orange*/
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    font-size:0.9rem;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    animation: slideIn 0.4s ease-out, fadeOut 0.4s ease-in 2.6s forwards;
-}
-
-/* Animations */
-@keyframes slideIn {
-    from { transform: translateX(100%); opacity: 0;}
-    to { transform: translateX(0); opacity: 1;}
-}
-
-@keyframes fadeOut {
-    from { opacity: 1;}
-    to { opacity: 0;}
-}
-
-.product-container {
-    display: flex;
-    flex-wrap: wrap;       /* This allows items to move to the next row */
-    justify-content: space-evenly; /* Even spacing between boxes */
-    padding: 5px;
-    background-color: #e3e6e6; /* Amazon's light grey background */
-}
-
-.product-card {
-    flex: 0 0 22%;         /* Each card takes up roughly 23% (approx 4 per row) */
-    margin-bottom: 5px;   /* Adds space between the rows */
-    background-color: white;
-    padding: 15px;
+    color: #222f3d;
 }
 
 /** footer **/
 
 footer {
     margin-top: 15px;
-}
-
-.back-to-top-link {
-    text-decoration: none; /* Removes the underline */
-    color: inherit; /* Keeps the text white/white-ish */
 }
 
 .foot-panel1 {
@@ -363,7 +277,6 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 0.85rem;
-    cursor: pointer;
 }
 
 .foot-panel2 {
@@ -385,29 +298,6 @@ ul a {
     color: #dddddd;
 }
 
-/* btn clear all items */
-
-.footer-reset-section {
-    padding: 20px 0;
-    text-align: center; /* Centers the button */
-    border-top: 1px solid #3a4553; /* Subtle line to separate it */
-    background-color: #232f3e; /* Matches the dark footer color */
-}
-
-.clear-btn {
-    background-color: #f0c14b; /* Amazon button yellow */
-    border: 1px solid #a88734;
-    color: #111;
-    padding: 7px 20px;
-    border-radius: 3px;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.clear-btn:hover {
-    background-color: #ddb347;
-}
-
 .foot-panel3 {
     background-color: #222f3d;
     color: white;
@@ -419,7 +309,7 @@ ul a {
 }
 
 .logo {
-    background-image: url(Images/amazon_logo_2.jpg);
+    background-image: url(amazon_logo_2.jpg);
     background-size: cover;
     height: 50px;
     width: 100px;
@@ -443,53 +333,5 @@ ul a {
 
 .copyright {
     padding-top: 5px;
-}
-
-/* For Tablets (Screens smaller than 992px) */
-@media (max-width: 992px) {
-    .product-card {
-        flex: 0 0 45%; /* Shows 2 items per row */
-    }
-}
-
-/* For Mobile Phones (Screens smaller than 600px) */
-@media (max-width: 600px) {
-    .product-card {
-        flex: 0 0 95%; /* Shows 1 item per row (Full width) */
-    }
-    
-    .panel-ops {
-        display: none; /* Hides the extra category bar to save space on tiny phones */
-    }
-}
-
-/* 1. Ensure the container can wrap items */
-.shop-section1 {
-    display: flex;
-    flex-wrap: wrap; /* This allows items to move to the next line */
-    justify-content: center;
-    width: 100%;
-}
-
-/* 2. Responsive Breakpoints */
-
-/* For Tablets (iPad, etc.) - Show 2 items per row */
-@media (max-width: 992px) {
-    .product-card {
-        width: 45%; /* Two cards side-by-side */
-        margin: 10px;
-    }
-}
-
-/* For Mobile Phones (iPhone SE, XR, Samsung S20, Pixel 7) - Show 1 item per row */
-@media (max-width: 600px) {
-    .product-card {
-        width: 90%; /* One card takes up almost the full width */
-        margin: 10px auto;
-    }
-
-    .navbar {
-        flex-wrap: wrap; /* Allows the search bar to drop to a new line if needed */
-    }
 }
 

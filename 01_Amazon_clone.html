@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon</title> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="01_Amazon_clone.css">
 </head>
 <body>
    <header>
@@ -54,9 +54,9 @@
 
           <!--box 4-->
 
-          <div class="nav-signin border" id="nav-user-info">
-            <p><span class="nav-lineOne" id="nav-user-greeting">Hello, sign in</span></p>
-            <p class="nav-second nav-lineTwo" id="nav-auth-link">Accounts & Lists</p>
+          <div class="nav-signin border">
+            <p><span>Hello, sign in</span></p>
+            <p class="nav-second">Accounts & Lists</p>
           </div>
 
           <!--box 5-->
@@ -67,16 +67,12 @@
           </div>
 
           <!--box 6-->
-          <a href="checkout.html" style="text-decoration: none; color: inherit;">
-            <div class="nav-cart border">
-              <i class="fa-solid fa-cart-shopping"></i>
-              Cart
-              <span id="cart-count">0</span>
-            </div>
-          </a>
-          
 
-          
+          <div class="nav-cart border">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart
+            <span id="cart-count">0</span>
+          </div>
 
         </div>
 
@@ -84,19 +80,18 @@
 
         <div class="panel">
 
-          <div class="panel-all filter-link" data-category>
+          <div class="panel-all border">
             <i class="fa-solid fa-bars"></i>
             All
           </div>
           <div class="panel-ops">
-            <p class="border filter-link" data-category>Style</p>
-            <p class="border filter-link" data-category>Health</p>
-            <p class="border filter-link" data-category>Home</p>
-            <p class="border filter-link" data-category>Electronics</p>
-            <p class="border filter-link" data-category>Pet Care</p>
-            <p class="border filter-link" data-category>Kids</p>
+            <p class="border">Today's Deals</p>
+            <p class="border">Customer Service</p>
+            <p class="border">Registry</p>
+            <p class="border">Gift Cards</p>
+            <p class="border">Sell</p>
           </div>
-          <div class="panel-deals border filter-link">
+          <div class="panel-deals border">
             Shop deals in Electronics
           </div>
 
@@ -117,26 +112,78 @@
 
     <!--shop-section1-->
 
-    <div class="shop-section1 product-container">
-      <div id="loading-spinner">Loading products for you...</div>
+   <div class="shop-section1">
+     <div class="box1 box">
+       <div class="box-content">
+        <h2>Clothes</h2>
+        <div class="box-img" style="background-image: url('box1_image.jpg');"></div>
+        <p>See more</p>
+       </div>
+     </div>
+     <div class="box2 box">
+       <div class="box-content">
+         <h2>Health & Personal Care</h2>
+         <div class="box-img" style="background-image: url('box2_image.jpg');"></div>
+         <p>See more</p>
+         <button class="add-to-cart-btn">Add to Cart</button>
+       </div>
+     </div>
+     <div class="box3 box">
+       <div class="box-content">
+         <h2>Furniture</h2>
+         <div class="box-img" style="background-image: url('box3_image.jpg');"></div>
+         <p>See more</p>
+       </div>
+     </div>
+     <div class="box4 box">
+       <div class="box-content">
+         <h2>Electronics</h2>
+         <div class="box-img" style="background-image: url('box4_image.jpg');"></div>
+         <p>See more</p>
+       </div>
+     </div>
     </div>
 
-    
-    <!-- msg no results fonund -->
-    <div id="no-results" style="display: none; text-align: center; padding: 50px; width: 100%;">
-      <h2 style="color: #c45500;">No results found.</h2>
-      <p>Try checking your spelling or use more general terms.</p>
+    <!--shop-section2-->
+
+    <div class="shop-section2">
+      <div class="box5 box">
+        <div class="box-content">
+         <h2>Beauty picks</h2>
+         <div class="box-img" style="background-image: url('box5_image.jpg');"></div>
+         <p>See more</p>
+        </div>
+      </div>
+      <div class="box6 box">
+        <div class="box-content">
+          <h2>Pet Care</h2>
+          <div class="box-img" style="background-image: url('box6_image.jpg');"></div>
+          <p>See more</p>
+        </div>
+      </div>
+      <div class="box7 box">
+        <div class="box-content">
+          <h2>New Arrival in Toys</h2>
+          <div class="box-img" style="background-image: url('box7_image.jpg');"></div>
+          <p>See more</p>
+        </div>
+      </div>
+      <div class="box8 box">
+        <div class="box-content">
+          <h2>Smartwatches</h2>
+          <div class="box-img" style="background-image: url('box8_image.jpg');"></div>
+          <p>See more</p>
+        </div>
+      </div>
     </div>
 
     <footer>
 
       <!--foot-panel1-->
-      <a href="#" class="back-to-top-link">
-        <div class="foot-panel1">
-          Back to Top
-        </div>
-      </a>
-      
+
+      <div class="foot-panel1">
+        Back to Top
+      </div>
 
       <!--foot-panel2-->
 
@@ -179,14 +226,8 @@
         </ul>
       </div>
 
-      <!-- btn - clear all items -->
-
-      <div class="footer-reset-section">
-        <button id="clear-cart-btn" class="clear-btn">Clear Your Guest Cart</button>
-      </div>
-
       <!--foot-panel3-->
-      
+
       <div class="foot-panel3">
         <div class="logo"></div>
       </div>
@@ -205,6 +246,5 @@
       </div>
         
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
